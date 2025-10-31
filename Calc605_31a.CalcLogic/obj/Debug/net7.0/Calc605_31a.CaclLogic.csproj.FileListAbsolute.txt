@@ -1,0 +1,11 @@
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/bin/Debug/net7.0/Calc605_31a.CaclLogic.deps.json
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/bin/Debug/net7.0/Calc605_31a.CaclLogic.dll
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/bin/Debug/net7.0/Calc605_31a.CaclLogic.pdb
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/Calc605_31a.CaclLogic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/Calc605_31a.CaclLogic.AssemblyInfoInputs.cache
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/Calc605_31a.CaclLogic.AssemblyInfo.cs
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/Calc605_31a.CaclLogic.csproj.CoreCompileInputs.cache
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/Calc605_31a.CaclLogic.dll
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/refint/Calc605_31a.CaclLogic.dll
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/Calc605_31a.CaclLogic.pdb
+/Users/daniilsmaznov/Downloads/Calc605-31a/Calc605_31a.CaclLogic/obj/Debug/net7.0/ref/Calc605_31a.CaclLogic.dll

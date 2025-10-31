@@ -1,0 +1,11 @@
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/bin/Debug/net9.0/Calc605_31a.CalcLogic.deps.json
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/bin/Debug/net9.0/Calc605_31a.CalcLogic.dll
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/bin/Debug/net9.0/Calc605_31a.CalcLogic.pdb
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/Calc605_31a.CalcLogic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/Calc605_31a.CalcLogic.AssemblyInfoInputs.cache
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/Calc605_31a.CalcLogic.AssemblyInfo.cs
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/Calc605_31a.CalcLogic.csproj.CoreCompileInputs.cache
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/Calc605_31a.CalcLogic.dll
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/refint/Calc605_31a.CalcLogic.dll
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/Calc605_31a.CalcLogic.pdb
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0/ref/Calc605_31a.CalcLogic.dll

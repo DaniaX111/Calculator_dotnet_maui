@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="Calc605-31a.app/Contents/MacOS/Calc605-31a">
+      <IsAppExtension>false</IsAppExtension>
+      <BCSymbolMapName>Calc605-31a.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>Calc605-31a.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/mtouch-symbols.list</SymbolFile>
+      <DSymName>Calc605-31a.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a</SourceProjectPath>
+      <IsXPCService></IsXPCService>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

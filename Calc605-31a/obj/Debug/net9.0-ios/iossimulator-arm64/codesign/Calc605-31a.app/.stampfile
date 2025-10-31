@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-ios/iossimulator-arm64/Entitlements.xcent /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/bin/Debug/net9.0-ios/iossimulator-arm64/Calc605-31a.app
