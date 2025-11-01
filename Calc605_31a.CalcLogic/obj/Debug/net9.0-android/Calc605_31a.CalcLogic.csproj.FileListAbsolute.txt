@@ -32,3 +32,4 @@
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-android/stamp/_CleanIntermediateIfNeeded.stamp
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-android/stamp/_ConvertResourcesCases.stamp
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-android/stamp/_ResolveLibraryProjectImports.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-android/Calc605_31a.CalcLogic.sourcelink.json

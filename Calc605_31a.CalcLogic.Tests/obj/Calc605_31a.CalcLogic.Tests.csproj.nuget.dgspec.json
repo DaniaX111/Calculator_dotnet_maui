@@ -84,6 +84,11 @@
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "iossimulator-arm64": {
+          "#import": []
+        }
       }
     },
     "/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/Calc605_31a.CalcLogic.csproj": {
@@ -263,6 +268,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "iossimulator-arm64": {
+          "#import": []
         }
       }
     }

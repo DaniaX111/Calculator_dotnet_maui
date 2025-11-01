@@ -19,3 +19,4 @@
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-ios/refint/Calc605_31a.CalcLogic.dll
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-ios/Calc605_31a.CalcLogic.pdb
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-ios/ref/Calc605_31a.CalcLogic.dll
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605_31a.CalcLogic/obj/Debug/net9.0-ios/Calc605_31a.CalcLogic.sourcelink.json

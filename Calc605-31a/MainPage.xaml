@@ -6,15 +6,18 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
+            <!--  Базовый стиль кнопок  -->
             <Style TargetType="Button" x:Key="BaseButtonStyle">
-                <Setter Property="FontSize" Value="40" />
-                <Setter Property="BackgroundColor" Value="{x:Null}" />
+                <Setter Property="FontSize" Value="50" />
+                <Setter Property="BackgroundColor" Value="#F3F4F6" />
+                <!--  светлый фон  -->
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="BorderWidth" Value="0" />
                 <Setter Property="CornerRadius" Value="12" />
                 <Setter Property="Margin" Value="4" />
             </Style>
 
+            <!--  Операционные кнопки  -->
             <Style
                 BasedOn="{StaticResource BaseButtonStyle}"
                 TargetType="Button"
@@ -23,6 +26,7 @@
                 <Setter Property="TextColor" Value="White" />
             </Style>
 
+            <!--  Специальные кнопки (C, ←)  -->
             <Style
                 BasedOn="{StaticResource BaseButtonStyle}"
                 TargetType="Button"
@@ -102,16 +106,19 @@
             Clicked="Button_Clicked"
             Grid.Column="0"
             Grid.Row="2"
+            Style="{StaticResource BaseButtonStyle}"
             Text="7" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
             Grid.Row="2"
+            Style="{StaticResource BaseButtonStyle}"
             Text="8" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
             Grid.Row="2"
+            Style="{StaticResource BaseButtonStyle}"
             Text="9" />
         <Button
             Clicked="Button_Clicked"
@@ -125,16 +132,19 @@
             Clicked="Button_Clicked"
             Grid.Column="0"
             Grid.Row="3"
+            Style="{StaticResource BaseButtonStyle}"
             Text="4" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
             Grid.Row="3"
+            Style="{StaticResource BaseButtonStyle}"
             Text="5" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
             Grid.Row="3"
+            Style="{StaticResource BaseButtonStyle}"
             Text="6" />
         <Button
             Clicked="Button_Clicked"
@@ -148,16 +158,19 @@
             Clicked="Button_Clicked"
             Grid.Column="0"
             Grid.Row="4"
+            Style="{StaticResource BaseButtonStyle}"
             Text="1" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
             Grid.Row="4"
+            Style="{StaticResource BaseButtonStyle}"
             Text="2" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
             Grid.Row="4"
+            Style="{StaticResource BaseButtonStyle}"
             Text="3" />
         <Button
             Clicked="Button_Clicked"
@@ -173,11 +186,13 @@
             Grid.Column="0"
             Grid.ColumnSpan="2"
             Grid.Row="5"
+            Style="{StaticResource BaseButtonStyle}"
             Text="0" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
             Grid.Row="5"
+            Style="{StaticResource BaseButtonStyle}"
             Text="." />
     </Grid>
 </ContentPage>

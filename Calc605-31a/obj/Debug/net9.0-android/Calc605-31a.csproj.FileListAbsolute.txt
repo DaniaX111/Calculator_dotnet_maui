@@ -2720,3 +2720,4 @@
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-android/stamp/_GenerateJavaStubs.stamp
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-android/stamp/_ResolveLibraryProjectImports.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-android/Calc605-31a.sourcelink.json

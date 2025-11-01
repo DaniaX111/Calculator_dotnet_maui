@@ -1,4 +1,7 @@
-﻿namespace Calc605_31a.CalcLogic
+﻿using System;
+using System.Globalization;
+
+namespace Calc605_31a.CalcLogic
 {
     public class Calculator
     {
@@ -8,11 +11,13 @@
 
         public string Display { get; private set; } = "0";
 
+        private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
+
         public string Input(string InputParam)
         {
             switch (InputParam)
             {
-                // ===== ЧИСЛА =====
+                // ===== ЦИФРЫ =====
                 case "0":
                 case "1":
                 case "2":
@@ -23,20 +28,16 @@
                 case "7":
                 case "8":
                 case "9":
-                    if (!string.IsNullOrEmpty(_operation) && _operand1 == null)
-                    {
-                        _operand1 = Convert.ToDouble(Display);
-                        Display = "0";
-                    }
-
                     if (Display == "0")
-                    {
                         Display = InputParam;
-                    }
                     else
-                    {
                         Display += InputParam;
-                    }
+                    return Display;
+
+                // ===== ТОЧКА =====
+                case ".":
+                    if (!Display.Contains("."))
+                        Display += ".";
                     return Display;
 
                 // ===== ОПЕРАЦИИ =====
@@ -44,32 +45,41 @@
                 case "-":
                 case "x":
                 case "/":
+                    if (_operand1 == null)
+                    {
+                        _operand1 = double.Parse(Display, Invariant);
+                    }
+                    else if (!string.IsNullOrEmpty(_operation))
+                    {
+                        _operand2 = double.Parse(Display, Invariant);
+                        Compute();
+                    }
+
                     _operation = InputParam;
-                    _operand2 = null; // сбросить второй операнд
+                    Display = "0";
                     return Display;
 
                 // ===== РАВНО =====
                 case "=":
-                    if (_operand1 == null) _operand1 = Convert.ToDouble(Display);
-                    if (_operand2 == null) _operand2 = Convert.ToDouble(Display);
+                    if (_operand1 == null)
+                        _operand1 = double.Parse(Display, Invariant);
+                    else
+                        _operand2 = double.Parse(Display, Invariant);
 
-                    if (_operation == "+") _operand1 = _operand1 + _operand2;
-                    if (_operation == "-") _operand1 = _operand1 - _operand2;
-                    if (_operation == "x") _operand1 = _operand1 * _operand2;
-                    if (_operation == "/") _operand1 = _operand2 == 0 ? double.NaN : _operand1 / _operand2;
-
-                    Display = _operand1.ToString();
+                    Compute();
+                    Display = FormatResult(_operand1);
+                    _operation = string.Empty;
                     return Display;
 
-                // ===== СТЁРКА: Удалить один символ =====
+                // ===== СТЕРКА =====
                 case "←":
                     if (Display.Length > 1)
-                        Display = Display.Substring(0, Display.Length - 1);
+                        Display = Display[..^1];
                     else
                         Display = "0";
                     return Display;
 
-                // ===== CLEAR: Полная очистка =====
+                // ===== СБРОС =====
                 case "C":
                     _operand1 = null;
                     _operand2 = null;
@@ -78,8 +88,30 @@
                     return Display;
 
                 default:
-                    throw new Exception("O_o");
+                    throw new Exception($"Неизвестная команда: {InputParam}");
             }
+        }
+
+        private void Compute()
+        {
+            if (_operand1 == null || _operand2 == null) return;
+
+            switch (_operation)
+            {
+                case "+": _operand1 += _operand2; break;
+                case "-": _operand1 -= _operand2; break;
+                case "x": _operand1 *= _operand2; break;
+                case "/": _operand1 = _operand2 == 0 ? double.NaN : _operand1 / _operand2; break;
+            }
+
+            _operand2 = null;
+        }
+
+        private string FormatResult(double? value)
+        {
+            if (value == null) return "0";
+            var str = value.Value.ToString("G15", Invariant);
+            return str.Contains('.') ? str.TrimEnd('0').TrimEnd('.') : str;
         }
     }
 }

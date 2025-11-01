@@ -182,6 +182,11 @@
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "iossimulator-arm64": {
+          "#import": []
+        }
       }
     }
   }
