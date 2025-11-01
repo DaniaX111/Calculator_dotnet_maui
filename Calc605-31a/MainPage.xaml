@@ -10,7 +10,6 @@
             <Style TargetType="Button" x:Key="BaseButtonStyle">
                 <Setter Property="FontSize" Value="50" />
                 <Setter Property="BackgroundColor" Value="#F3F4F6" />
-                <!--  светлый фон  -->
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="BorderWidth" Value="0" />
                 <Setter Property="CornerRadius" Value="12" />
@@ -26,7 +25,7 @@
                 <Setter Property="TextColor" Value="White" />
             </Style>
 
-            <!--  Специальные кнопки (C, ←)  -->
+            <!--  Специальные кнопки (C, ←, память)  -->
             <Style
                 BasedOn="{StaticResource BaseButtonStyle}"
                 TargetType="Button"
@@ -41,9 +40,12 @@
         ColumnSpacing="8"
         Padding="10"
         RowSpacing="8">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <!--  Display  -->
+            <RowDefinition Height="*" />
+            <!--  Memory buttons  -->
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -75,123 +77,149 @@
             VerticalTextAlignment="Center"
             x:Name="Display" />
 
-        <!--  === ROW 1: C, ←, /, x ===  -->
+        <!--  === ROW 1: Memory buttons (MC, MR, M+, M-) ===  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
             Grid.Row="1"
+            Style="{StaticResource SpecialButtonStyle}"
+            Text="MC" />
+        <Button
+            Clicked="Button_Clicked"
+            Grid.Column="1"
+            Grid.Row="1"
+            Style="{StaticResource SpecialButtonStyle}"
+            Text="MR" />
+        <Button
+            Clicked="Button_Clicked"
+            Grid.Column="2"
+            Grid.Row="1"
+            Style="{StaticResource SpecialButtonStyle}"
+            Text="M+" />
+        <Button
+            Clicked="Button_Clicked"
+            Grid.Column="3"
+            Grid.Row="1"
+            Style="{StaticResource SpecialButtonStyle}"
+            Text="M-" />
+
+        <!--  === ROW 2: C, ←, /, x ===  -->
+        <Button
+            Clicked="Button_Clicked"
+            Grid.Column="0"
+            Grid.Row="2"
             Style="{StaticResource SpecialButtonStyle}"
             Text="C" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
-            Grid.Row="1"
+            Grid.Row="2"
             Style="{StaticResource SpecialButtonStyle}"
             Text="←" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
-            Grid.Row="1"
+            Grid.Row="2"
             Style="{StaticResource OperationButtonStyle}"
             Text="/" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="3"
-            Grid.Row="1"
+            Grid.Row="2"
             Style="{StaticResource OperationButtonStyle}"
             Text="x" />
 
-        <!--  === ROW 2: 7, 8, 9, - ===  -->
+        <!--  === ROW 3: 7, 8, 9, - ===  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
-            Grid.Row="2"
+            Grid.Row="3"
             Style="{StaticResource BaseButtonStyle}"
             Text="7" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
-            Grid.Row="2"
+            Grid.Row="3"
             Style="{StaticResource BaseButtonStyle}"
             Text="8" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
-            Grid.Row="2"
+            Grid.Row="3"
             Style="{StaticResource BaseButtonStyle}"
             Text="9" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="3"
-            Grid.Row="2"
+            Grid.Row="3"
             Style="{StaticResource OperationButtonStyle}"
             Text="-" />
 
-        <!--  === ROW 3: 4, 5, 6, + ===  -->
+        <!--  === ROW 4: 4, 5, 6, + ===  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
-            Grid.Row="3"
+            Grid.Row="4"
             Style="{StaticResource BaseButtonStyle}"
             Text="4" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
-            Grid.Row="3"
+            Grid.Row="4"
             Style="{StaticResource BaseButtonStyle}"
             Text="5" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
-            Grid.Row="3"
+            Grid.Row="4"
             Style="{StaticResource BaseButtonStyle}"
             Text="6" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="3"
-            Grid.Row="3"
+            Grid.Row="4"
             Style="{StaticResource OperationButtonStyle}"
             Text="+" />
 
-        <!--  === ROW 4: 1, 2, 3, = ===  -->
+        <!--  === ROW 5: 1, 2, 3, = ===  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
-            Grid.Row="4"
+            Grid.Row="5"
             Style="{StaticResource BaseButtonStyle}"
             Text="1" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="1"
-            Grid.Row="4"
+            Grid.Row="5"
             Style="{StaticResource BaseButtonStyle}"
             Text="2" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
-            Grid.Row="4"
+            Grid.Row="5"
             Style="{StaticResource BaseButtonStyle}"
             Text="3" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="3"
-            Grid.Row="4"
+            Grid.Row="5"
             Grid.RowSpan="2"
             Style="{StaticResource OperationButtonStyle}"
             Text="=" />
 
-        <!--  === ROW 5: 0, ., (пусто), (равно занимает справа) ===  -->
+        <!--  === ROW 6: 0, ., (равно справа) ===  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
             Grid.ColumnSpan="2"
-            Grid.Row="5"
+            Grid.Row="6"
             Style="{StaticResource BaseButtonStyle}"
             Text="0" />
         <Button
             Clicked="Button_Clicked"
             Grid.Column="2"
-            Grid.Row="5"
+            Grid.Row="6"
             Style="{StaticResource BaseButtonStyle}"
             Text="." />
     </Grid>

@@ -2,9 +2,7 @@
   "version": 3,
   "targets": {
     "net9.0": {},
-    "net9.0/iossimulator-arm64": {},
     "net9.0-android35.0": {},
-    "net9.0-android35.0/iossimulator-arm64": {},
     "net9.0-ios18.0": {
       "Microsoft.NET.ILLink.Tasks/9.0.9": {
         "type": "package",
@@ -13,23 +11,7 @@
         }
       }
     },
-    "net9.0-ios18.0/iossimulator-arm64": {
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.NET.ILLink.Tasks.props": {}
-        }
-      }
-    },
     "net9.0-maccatalyst18.0": {
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.NET.ILLink.Tasks.props": {}
-        }
-      }
-    },
-    "net9.0-maccatalyst18.0/iossimulator-arm64": {
       "Microsoft.NET.ILLink.Tasks/9.0.9": {
         "type": "package",
         "build": {
@@ -281,11 +263,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "iossimulator-arm64": {
-        "#import": []
       }
     }
   }

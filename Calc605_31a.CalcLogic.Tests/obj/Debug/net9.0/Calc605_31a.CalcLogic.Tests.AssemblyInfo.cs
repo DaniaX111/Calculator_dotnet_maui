@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calc605_31a.CalcLogic.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a350b4db0a9e00a3ee916d64eb95fd79084d31d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee09d1d2e3b47bcf2793c15994b9b305fe52b658")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calc605_31a.CalcLogic.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calc605_31a.CalcLogic.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

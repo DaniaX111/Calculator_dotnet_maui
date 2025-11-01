@@ -8,6 +8,7 @@ namespace Calc605_31a.CalcLogic
         private double? _operand1 = null;
         private double? _operand2 = null;
         private string _operation = string.Empty;
+        private double _memory = 0; // память калькулятора
 
         public string Display { get; private set; } = "0";
 
@@ -85,6 +86,28 @@ namespace Calc605_31a.CalcLogic
                     _operand2 = null;
                     _operation = string.Empty;
                     Display = "0";
+                    return Display;
+
+                // ======== ПАМЯТЬ ========
+
+                // Очистка памяти
+                case "MC":
+                    _memory = 0;
+                    return Display;
+
+                // Восстановление из памяти
+                case "MR":
+                    Display = FormatResult(_memory);
+                    return Display;
+
+                // Добавить к памяти
+                case "M+":
+                    _memory += double.Parse(Display, Invariant);
+                    return Display;
+
+                // Вычесть из памяти
+                case "M-":
+                    _memory -= double.Parse(Display, Invariant);
                     return Display;
 
                 default:

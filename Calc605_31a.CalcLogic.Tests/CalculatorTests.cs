@@ -1,3 +1,6 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
 namespace Calc605_31a.CalcLogic.Tests
 {
     [TestClass]
@@ -53,7 +56,7 @@ namespace Calc605_31a.CalcLogic.Tests
             Assert.ThrowsException<Exception>(() => calculator.Input("AbraCadabra"));
         }
 
-        // === Новый тест для Backspace ("←") ===
+        // === Backspace ===
         [TestMethod]
         public void Display_ShouldDeleteLastDigit_WhenBackspacePressed()
         {
@@ -67,7 +70,7 @@ namespace Calc605_31a.CalcLogic.Tests
             Assert.AreEqual("12", calculator.Display);
         }
 
-        // === Новый тест для Clear ("C") ===
+        // === Clear ===
         [TestMethod]
         public void Display_ShouldResetToZero_WhenClearPressed()
         {
@@ -80,7 +83,6 @@ namespace Calc605_31a.CalcLogic.Tests
             Assert.AreEqual("0", calculator.Display);
         }
 
-        // === Проверка что стерка работает после вычисления ===
         [TestMethod]
         public void Display_ShouldBeZeroAfterCalculationAndClear()
         {
@@ -95,7 +97,6 @@ namespace Calc605_31a.CalcLogic.Tests
             Assert.AreEqual("0", calculator.Display);
         }
 
-        // === Проверка последовательного удаления ===
         [TestMethod]
         public void Display_ShouldDeleteAllDigitsToZero_WhenMultipleBackspaces()
         {
@@ -109,6 +110,78 @@ namespace Calc605_31a.CalcLogic.Tests
             calculator.Input("←");
 
             Assert.AreEqual("0", calculator.Display);
+        }
+
+        // === ПАМЯТЬ ===
+
+        [TestMethod]
+        public void Memory_ShouldStoreValue_WhenMPlusPressed()
+        {
+            var calculator = new Calculator();
+
+            calculator.Input("5");
+            calculator.Input("M+");
+            calculator.Input("C");
+            calculator.Input("MR");
+
+            Assert.AreEqual("5", calculator.Display);
+        }
+
+        [TestMethod]
+        public void Memory_ShouldSubtractValue_WhenMMinusPressed()
+        {
+            var calculator = new Calculator();
+
+            calculator.Input("10");
+            calculator.Input("M+");
+            calculator.Input("4");
+            calculator.Input("M-");
+            calculator.Input("C");
+            calculator.Input("MR");
+
+            Assert.AreEqual("6", calculator.Display);
+        }
+
+        [TestMethod]
+        public void Memory_ShouldClear_WhenMCPressed()
+        {
+            var calculator = new Calculator();
+
+            calculator.Input("9");
+            calculator.Input("M+");
+            calculator.Input("MC");
+            calculator.Input("C");
+            calculator.Input("MR");
+
+            Assert.AreEqual("0", calculator.Display);
+        }
+
+        [TestMethod]
+        public void Memory_ShouldRecallCorrectValue_WhenMRPressed()
+        {
+            var calculator = new Calculator();
+
+            calculator.Input("3");
+            calculator.Input("M+");
+            calculator.Input("C");
+            calculator.Input("MR");
+
+            Assert.AreEqual("3", calculator.Display);
+        }
+
+        [TestMethod]
+        public void Memory_ShouldAccumulateMultipleMPlusCalls()
+        {
+            var calculator = new Calculator();
+
+            calculator.Input("2");
+            calculator.Input("M+");
+            calculator.Input("3");
+            calculator.Input("M+");
+            calculator.Input("C");
+            calculator.Input("MR");
+
+            Assert.AreEqual("5", calculator.Display);
         }
     }
 }
