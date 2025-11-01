@@ -298,3 +298,17 @@
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/ref/Calc605-31a.dll
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/Calc605-31a.sourcelink.json
 /Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Calc605_31a.CalcLogic.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Configuration.Abstractions.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Configuration.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.DependencyInjection.Abstractions.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.DependencyInjection.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Logging.Abstractions.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Logging.Debug.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Logging.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Options.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Primitives.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Controls.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Controls.Xaml.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Essentials.stamp
+/Users/daniilsmaznov/Documents/ВУЗ/Calc605-31a/Calc605-31a/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Graphics.stamp

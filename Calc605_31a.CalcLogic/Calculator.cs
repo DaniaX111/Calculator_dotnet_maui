@@ -5,114 +5,151 @@ namespace Calc605_31a.CalcLogic
 {
     public class Calculator
     {
-        private double? _operand1 = null;
-        private double? _operand2 = null;
-        private string _operation = string.Empty;
-        private double _memory = 0; // память калькулятора
-
-        public string Display { get; private set; } = "0";
+        private double? _operand1;
+        private double? _operand2;
+        private string _operation;
+        private double _memory;
 
         private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
 
-        public string Input(string InputParam)
+        public string Display { get; private set; }
+
+        public Calculator()
         {
-            switch (InputParam)
+            _operand1 = null;
+            _operand2 = null;
+            _operation = string.Empty;
+            _memory = 0;
+            Display = "0";
+        }
+
+        public string Input(string inputParam)
+        {
+            try
             {
-                // ===== ЦИФРЫ =====
-                case "0":
-                case "1":
-                case "2":
-                case "3":
-                case "4":
-                case "5":
-                case "6":
-                case "7":
-                case "8":
-                case "9":
-                    if (Display == "0")
-                        Display = InputParam;
-                    else
-                        Display += InputParam;
-                    return Display;
+                switch (inputParam)
+                {
+                    // ===== ЦИФРЫ =====
+                    case "0":
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+                        if (Display == "0")
+                            Display = inputParam;
+                        else
+                            Display += inputParam;
+                        return Display;
 
-                // ===== ТОЧКА =====
-                case ".":
-                    if (!Display.Contains("."))
-                        Display += ".";
-                    return Display;
+                    // ===== ТОЧКА =====
+                    case ".":
+                        if (!Display.Contains("."))
+                            Display += ".";
+                        return Display;
 
-                // ===== ОПЕРАЦИИ =====
-                case "+":
-                case "-":
-                case "x":
-                case "/":
-                    if (_operand1 == null)
-                    {
-                        _operand1 = double.Parse(Display, Invariant);
-                    }
-                    else if (!string.IsNullOrEmpty(_operation))
-                    {
-                        _operand2 = double.Parse(Display, Invariant);
-                        Compute();
-                    }
+                    // ===== ОПЕРАЦИИ =====
+                    case "+":
+                    case "-":
+                    case "x":
+                    case "/":
+                        if (_operand1 == null)
+                        {
+                            if (!TryParseDisplay(out var v1)) return Display;
+                            _operand1 = v1;
+                        }
+                        else if (!string.IsNullOrEmpty(_operation))
+                        {
+                            if (!TryParseDisplay(out var v2)) return Display;
+                            _operand2 = v2;
+                            Compute();
+                        }
 
-                    _operation = InputParam;
-                    Display = "0";
-                    return Display;
-
-                // ===== РАВНО =====
-                case "=":
-                    if (_operand1 == null)
-                        _operand1 = double.Parse(Display, Invariant);
-                    else
-                        _operand2 = double.Parse(Display, Invariant);
-
-                    Compute();
-                    Display = FormatResult(_operand1);
-                    _operation = string.Empty;
-                    return Display;
-
-                // ===== СТЕРКА =====
-                case "←":
-                    if (Display.Length > 1)
-                        Display = Display[..^1];
-                    else
+                        _operation = inputParam;
                         Display = "0";
-                    return Display;
+                        return Display;
 
-                // ===== СБРОС =====
-                case "C":
-                    _operand1 = null;
-                    _operand2 = null;
-                    _operation = string.Empty;
-                    Display = "0";
-                    return Display;
+                    // ===== РАВНО =====
+                    case "=":
+                        if (_operand1 == null)
+                        {
+                            if (!TryParseDisplay(out var v3)) return Display;
+                            _operand1 = v3;
+                        }
+                        else
+                        {
+                            if (!TryParseDisplay(out var v4)) return Display;
+                            _operand2 = v4;
+                        }
 
-                // ======== ПАМЯТЬ ========
+                        Compute();
+                        Display = FormatResult(_operand1);
+                        _operation = string.Empty;
+                        return Display;
 
-                // Очистка памяти
-                case "MC":
-                    _memory = 0;
-                    return Display;
+                    // ===== СТЕРКА =====
+                    case "←":
+                        if (Display.Length > 1)
+                            Display = Display[..^1];
+                        else
+                            Display = "0";
+                        return Display;
 
-                // Восстановление из памяти
-                case "MR":
-                    Display = FormatResult(_memory);
-                    return Display;
+                    // ===== СБРОС =====
+                    case "C":
+                        _operand1 = null;
+                        _operand2 = null;
+                        _operation = string.Empty;
+                        Display = "0";
+                        return Display;
 
-                // Добавить к памяти
-                case "M+":
-                    _memory += double.Parse(Display, Invariant);
-                    return Display;
+                    // ===== ПАМЯТЬ =====
+                    case "MC":
+                        _memory = 0;
+                        Display = "0";  // очищаем экран
+                        _operand1 = null;
+                        _operand2 = null;
+                        _operation = string.Empty;
+                        return Display;
 
-                // Вычесть из памяти
-                case "M-":
-                    _memory -= double.Parse(Display, Invariant);
-                    return Display;
+                    case "MR":
+                        Display = FormatResult(_memory);
+                        return Display;
 
-                default:
-                    throw new Exception($"Неизвестная команда: {InputParam}");
+                    case "M+":
+                        if (!TryParseDisplay(out var addVal)) return Display;
+                        _memory += addVal;
+                        return Display;
+
+                    case "M-":
+                        if (!TryParseDisplay(out var subVal)) return Display;
+                        _memory -= subVal;
+                        return Display;
+
+                    default:
+                        throw new Exception($"Неизвестная команда: {inputParam}");
+                }
             }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Calculator error: {ex.GetType().Name}: {ex.Message}");
+                return Display;
+            }
+        }
+
+        private bool TryParseDisplay(out double value)
+        {
+            value = 0;
+            if (string.IsNullOrWhiteSpace(Display)) return false;
+            if (Display.Equals("NaN", StringComparison.OrdinalIgnoreCase) ||
+                Display.Equals("Infinity", StringComparison.OrdinalIgnoreCase) ||
+                Display.Equals("-Infinity", StringComparison.OrdinalIgnoreCase)) return false;
+
+            return double.TryParse(Display, NumberStyles.Float | NumberStyles.AllowThousands, Invariant, out value);
         }
 
         private void Compute()

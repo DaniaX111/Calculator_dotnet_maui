@@ -6,17 +6,16 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <!--  Базовый стиль кнопок  -->
             <Style TargetType="Button" x:Key="BaseButtonStyle">
-                <Setter Property="FontSize" Value="50" />
+                <Setter Property="FontSize" Value="36" />
                 <Setter Property="BackgroundColor" Value="#F3F4F6" />
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="BorderWidth" Value="0" />
                 <Setter Property="CornerRadius" Value="12" />
                 <Setter Property="Margin" Value="4" />
+                <Setter Property="FontFamily" Value="Arial" />
             </Style>
 
-            <!--  Операционные кнопки  -->
             <Style
                 BasedOn="{StaticResource BaseButtonStyle}"
                 TargetType="Button"
@@ -25,7 +24,6 @@
                 <Setter Property="TextColor" Value="White" />
             </Style>
 
-            <!--  Специальные кнопки (C, ←, память)  -->
             <Style
                 BasedOn="{StaticResource BaseButtonStyle}"
                 TargetType="Button"
@@ -40,19 +38,22 @@
         ColumnSpacing="8"
         Padding="10"
         RowSpacing="8">
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <!--  Display  -->
             <RowDefinition Height="*" />
             <!--  Memory buttons  -->
             <RowDefinition Height="*" />
+            <!--  C, ←, /, x  -->
             <RowDefinition Height="*" />
+            <!--  7,8,9,-  -->
             <RowDefinition Height="*" />
+            <!--  4,5,6,+  -->
             <RowDefinition Height="*" />
+            <!--  1,2,3,=  -->
             <RowDefinition Height="*" />
+            <!--  0,.  -->
         </Grid.RowDefinitions>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -60,24 +61,21 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!--  === DISPLAY ===  -->
+        <!--  Display  -->
         <Label
             BackgroundColor="#E5E7EB"
             FontSize="64"
             Grid.ColumnSpan="4"
             Grid.Row="0"
             HeightRequest="120"
-            HorizontalOptions="Fill"
             HorizontalTextAlignment="End"
-            Margin="0,0,0,10"
             Padding="10"
             Text="0"
             TextColor="Black"
-            VerticalOptions="Center"
             VerticalTextAlignment="Center"
             x:Name="Display" />
 
-        <!--  === ROW 1: Memory buttons (MC, MR, M+, M-) ===  -->
+        <!--  Memory  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
@@ -103,7 +101,7 @@
             Style="{StaticResource SpecialButtonStyle}"
             Text="M-" />
 
-        <!--  === ROW 2: C, ←, /, x ===  -->
+        <!--  C, ←, /, x  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
@@ -129,7 +127,7 @@
             Style="{StaticResource OperationButtonStyle}"
             Text="x" />
 
-        <!--  === ROW 3: 7, 8, 9, - ===  -->
+        <!--  7,8,9,-  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
@@ -155,7 +153,7 @@
             Style="{StaticResource OperationButtonStyle}"
             Text="-" />
 
-        <!--  === ROW 4: 4, 5, 6, + ===  -->
+        <!--  4,5,6,+  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
@@ -181,7 +179,7 @@
             Style="{StaticResource OperationButtonStyle}"
             Text="+" />
 
-        <!--  === ROW 5: 1, 2, 3, = ===  -->
+        <!--  1,2,3,=  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
@@ -208,7 +206,7 @@
             Style="{StaticResource OperationButtonStyle}"
             Text="=" />
 
-        <!--  === ROW 6: 0, ., (равно справа) ===  -->
+        <!--  0,.  -->
         <Button
             Clicked="Button_Clicked"
             Grid.Column="0"
@@ -222,5 +220,6 @@
             Grid.Row="6"
             Style="{StaticResource BaseButtonStyle}"
             Text="." />
+
     </Grid>
 </ContentPage>
